@@ -11,14 +11,74 @@
     </style>
 </head>
 <body>
-    <h1>Orey Abhishekkkuuuu Button nokkuuu</h1>
-    <button id="displayButton">Click me</button>
-    <h1><p id="message" class="hidden">Poraa Erripappa.Emkavalanee OOOOOOO nokkkestunnnav</p></h1>
+    <h1>Neeku Ma jagan anna la buttons estam kadha neeku nachindhi nokkuko</h1>
+	<button id="displayButton1" style="background-color: red; color: white;">For you venky</button>
+	<h1><p id="message1" class="hidden">E button nokki em chedhamanukuntunnav po poyi pakkana nokkuko</p></h1>
+	<button id="displayButton2" style="background-color: green; color: white;">For you Venky</button>
+	<h1><p id="message2" class="hidden">Nuv kuda ma jagananna la button operators start chesava sare chudham</p></h1>
+	<button id="displayButton3"  style="background-color: orange; color: white;">For you venky</button>
+   <h1><p id="message3" class="hidden">Orange kavalannav ga po poyi nokkuko kavalsinanni times</p></h1>
+   
+ <style>
+    .hidden {
+        display: none;
+    }
+    @keyframes jump {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+	@keyframes moveLeftToRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+}
 
-    <script>
-        document.getElementById('displayButton').addEventListener('click', function() {
-            document.getElementById('message').classList.remove('hidden');
-        });
-    </script>
+    button {
+        transition: all 0.5s ease;
+        border-radius: 50%; /* Keeps the button round */
+        width: 50px; /* Fixed width */
+        height: 50px; /* Fixed height */
+        padding: 0; /* No padding */
+        line-height: 50px; /* Center text vertically */
+        text-align: center; /* Center text horizontally */
+        margin-right: 10px; /* Space between buttons */
+		
+    }
+    button:hover {
+        animation: jump 0.5s ease infinite;
+		 animation: moveLeftToRight 2s ease infinite;
+    }
+</style>
+
+
+
+   <script>
+    function hideAllMessages() {
+        document.getElementById('message1').classList.add('hidden');
+        document.getElementById('message2').classList.add('hidden');
+        document.getElementById('message3').classList.add('hidden');
+    }
+
+    document.getElementById('displayButton1').addEventListener('click', function() {
+        hideAllMessages();
+        document.getElementById('message1').classList.remove('hidden');
+    });
+
+    document.getElementById('displayButton2').addEventListener('click', function() {
+        hideAllMessages();
+        document.getElementById('message2').classList.remove('hidden');
+    });
+
+    document.getElementById('displayButton3').addEventListener('click', function() {
+        hideAllMessages();
+        document.getElementById('message3').classList.remove('hidden');
+    });
+</script>
+
+	
 </body>
 </html>
