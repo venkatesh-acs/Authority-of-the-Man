@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <h1>Ms. Lavanya thripaty</h1>
+    <h1>Ms. Lavs!</h1>
 	<button id="displayButton1" style="background-color: red; color: white;">For you</button>
 	<h1><p id="message1" class="hidden">Em chedhamani e button click chesav po pakkana button click chesko</p></h1>
 	<button id="displayButton2" style="background-color: green; color: white;">For you</button>
@@ -37,6 +37,13 @@
     100% { transform: translateX(0); }
 }
 
+@keyframes snakeMove {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(100px, 0); }
+    50% { transform: translate(100px, 100px); }
+    75% { transform: translate(0, 100px); }
+    100% { transform: translate(0, 0); }
+}
     button {
         transition: all 0.5s ease;
         border-radius: 50%; /* Keeps the button round */
@@ -51,6 +58,7 @@
     button:hover {
         animation: jump 0.5s ease infinite;
 		 animation: moveLeftToRight 2s ease infinite;
+		 animation: snakeMove 5s ease-in-out infinite;
     }
 </style>
 
